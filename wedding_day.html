@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhoomit weds Hetali</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #EDDDB8, #FFFAF1, #EDDDB8);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Great Vibes', cursive;
+            align-items: center;
+            z-index: 100;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        header img {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        header h1 {
+        
+            margin: 0;
+            cursor: pointer;
+        }
+
+        header .logo {
+            margin-left: 10px;
+        }
+
+        header .location{
+            font-weight: bold;
+        }
+        header .additional-text {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        main {
+            display: flex;
+            width: 100%;
+            flex: 1;
+            box-sizing: border-box;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .left-container,
+        .right-container {
+            flex: 1;
+            font-family: 'Charmonman', cursive;
+            border-radius: 10px;
+            overflow: hidden; /* Ensure rounded corners for child elements */
+        }
+        .left-container p,
+        .right-container p{
+            font-family: 'Great Vibes', cursive;
+            
+        }
+        .left-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .right-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .bottom-right-container {
+            background: transparent;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-bottom-container,
+        .right-bottom-container {
+            background: transparent;
+            padding: 10px;
+            flex: 1;
+            border-radius: 8px;
+        }
+
+        .left-bottom-container p,
+        .right-bottom-container p {
+            text-align: justify;
+            font-family: 'Great Vibes', cursive;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo" onclick="redirectToHome()" style="color: #E5B82A; font-size: 30px; ">
+            <img src="your-logo.png" alt="Logo">
+            <!-- Replace "your-logo.png" with the actual path to your logo image -->
+        </div>
+        <div style="color: #E5B82A; font-size: 30px; " onclick="redirectToHome()">Mandap Muhurat</div>
+        <div class="location" onclick="redirectToLocation()" style="color: #E5B82A; font-size: 30px;">
+            Wedding Day
+        </div>
+        <div class="Location">
+            <a href="https://maps.app.goo.gl/7RzZruNdb1wnihE59" target="_blank" style="color: #E5B82A; font-size: 30px; ">Location</a>
+            <!-- Replace "https://your-link.com" with the actual URL -->
+        </div>
+    </header>
+
+    <main>
+        <div class="left-container">
+            <img src="your-image.jpg" alt="Image">
+            <!-- Replace "your-image.jpg" with the actual path to your image -->
+        </div>
+
+        <div class="right-container">
+            <div class="top-right-container">
+                <div class="top-one-container">
+                    <h2 style="color: #E5B82A;">3 MARCH 2024</h2>
+                    <p style="color: #E5B82A; font-size: 30px; "> Hastha Milap<br> 9.45 PM</p>
+                </div>
+                <div class="bottom-one-container">
+                    <h2 style="color: #E5B82A;">VENUE</h2>
+                    <p style="color: #E5B82A; font-size: 26px; ">At,post: Atgam, undi faliya,Ta.Dist. -Valsad <br> Pin.code:396045</p>
+                </div>
+            </div>
+            <div class="bottom-right-container">
+                <div class="left-bottom-container">
+                    <h2 style="color: #E5B82A;">Sweet Thooko :</h2>
+                    <p style="color: #E5B82A; font-size: 28px; ">"In the quiet language of our hearts, love is the sweet word we speak. Join us openly, with joy, at our dear Uncle/Brother's wedding. Come soon!"</p>
+                </div>
+                <div class="right-bottom-container">
+                    <h2 style="color: #E5B82A;">By</h2>
+                    <p style="color: #E5B82A; font-size: 28px; ">Pritam, Jaimin , Mit , Megah ,Misti , jenny , dhaya and divit</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Redirect to the home page
+        function redirectToHome() {
+            window.location.href = "index.html"; // Replace with the actual URL
+        }
+
+        // Redirect to the location page
+        function redirectToLocation() {
+            window.location.href = "index.html"; // Replace with the actual URL
+        }
+    </script>
+
+</body>  
+</html>
