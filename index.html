@@ -7,111 +7,135 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
     <style>
-           body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #EDDDB8, #FFFAF1, #EDDDB8);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+          body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #501416;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-        #splash-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, #EDDDB8, #FFFAF1, #EDDDB8); /* Set the background gradient for the splash screen */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000; /* Set a high z-index to appear above other elements */
-        }
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #EDDDB8, #FFFAF1, #EDDDB8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
 
-        #splash-image {
-            max-width: 100%;
-            max-height: 100%;
-        }
+#splash-image {
+  max-width: 100%;
+  max-height: 100%;
+}
 
-        header {
-            color: #fff;
-            padding: 10px;
-            display: flex;
-            font-family: 'Great Vibes', cursive;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-            width: 100%;
-            box-sizing: border-box;
-        }
+header {
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  font-family: 'Great Vibes', cursive;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  width: 100%;
+  box-sizing: border-box;
+}
 
-        header img {
-            width: 50px;
-            height: 50px;
-            cursor: pointer; /* Add cursor style for clickable elements */
-        }
+header img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
 
-        header h1 {
-            font-weight: bold;
-            margin: 0;
-            cursor: pointer; /* Add cursor style for clickable elements */
-        }
+header h1 {
+  font-weight: bold;
+  margin: 0;
+  cursor: pointer;
+}
 
-        header .logo {
-            margin-left: 10px; /* Adjust margin as needed */
-        }
+header .logo {
+  margin-left: 10px;
+}
 
-        header .location,
-        header .additional-text {
-            margin-right: 10px; /* Adjust margin as needed */
-            cursor: pointer; /* Add cursor style for clickable elements */
-        }
+header .location,
+header .additional-text {
+  margin-right: 10px;
+  cursor: pointer;
+}
 
-        main {
-            display: flex;
-            width: 100%;
-            background: linear-gradient(to bottom, #EDDDB8, #FFFAF1, #EDDDB8);/* Set the background gradient for the main content */
-            height: calc(100vh - 60px); /* Adjusted for header height */
-            opacity: 0; /* Initially set main content to be invisible */
-            transition: opacity 1s ease-in-out; /* Smooth transition for opacity */
-        }
+main {
+  display: flex;
+  width: 100%;
+  background: #501416;
+  height: calc(100vh - 60px);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
 
-        .left-container,
-        .right-container {
-            flex: 1;
-            padding: 20px;
-        }
+.left-container,
+.right-container {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-        .left-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
+.left-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
 
-        .right-container {
-            display: grid;
-            font-family: 'Charmonman', cursive;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 20px;
-        }
+.right-container {
+  display: grid;
+  font-family: 'Charmonman', cursive;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
 
-        .right-container div {
-            text-align: justify;
-            justify-content:justify;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
+.right-container div {
+  text-align: justify;
+  justify-content: justify;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 
-        .right-container div p {
-            text-align: justify;
-            margin-top: 10px;
-            font-family: 'Great Vibes', cursive;
-        }
-     
+.right-container div p {
+  text-align: justify;
+  margin-top: 10px;
+  font-family: 'Great Vibes', cursive;
+  text-shadow: 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  header h1 {
+    margin-bottom: 10px;
+  }
+
+  .left-container,
+  .right-container {
+    padding: 10px;
+  }
+
+  .right-container {
+    grid-template-columns: 1fr;
+  }
+
+  .right-container div p {
+    font-size: 14px;
+  }
+}
     </style>
 </head>
 <body>
@@ -144,7 +168,7 @@
         <div class="right-container">
             <div>
                 <h2 style="color: #E5B82A;">1 MARCH 2024</h2>
-                <p style="color: #E5B82A; font-size: 30px;">Haldi<br>8.40 AM</p>
+                <p style="color: #E5B82A; font-size: 35px;">Haldi<br>8.40 AM</p>
             </div>
             <div>
                 <h2 style="color: #E5B82A;">2 MARCH 2024</h2>
@@ -161,7 +185,7 @@
          
             <div>
                 <h2 style="color: #E5B82A;">VENUE</h2>
-                <p style="color: #E5B82A; font-size: 26px;">At,Post: Segva (Khergam Road) <br>Ta.Dist. -Valsad <br>Pin.code: 396045</p>
+                <p style="color: #E5B82A; font-size: 26px;" onclick="ToLocation()" >At,Post: Segva (Khergam Road) <br>Ta.Dist. -Valsad <br>Pin.code: 396045</p>
             </div>
         </div>
         
@@ -191,6 +215,9 @@
         // Redirect to the location page
         function redirectToLocation() {
             window.location.href = "wedding_day.html"; // Replace with the actual URL
+        }
+        function ToLocation() {
+            window.location.href = "https://maps.app.goo.gl/C39g1Xry9r2bev1L7"; // Replace with the actual URL
         }
     </script>
 
