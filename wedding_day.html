@@ -7,154 +7,124 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
     <style>
-          body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background: #501416;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #501416;
+            /**linear-gradient(to bottom, #EDDDB8, #FFFAF1, #EDDDB8);**/
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Great Vibes', cursive;
+            align-items: center;
+            z-index: 100;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        header img {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
 
-#splash-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, #EDDDB8, #FFFAF1, #EDDDB8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
+        header h1 {
+        
+            margin: 0;
+            cursor: pointer;
+        }
 
-#splash-image {
-  max-width: 100%;
-  max-height: 100%;
-}
+        header .logo {
+            margin-left: 10px;
+        }
 
-header {
-  color: #fff;
-  padding: 10px;
-  display: flex;
-  font-family: 'Great Vibes', cursive;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-  width: 100%;
-  box-sizing: border-box;
-}
+        header .location{
+            font-weight: bold;
+        }
+        header .additional-text {
+            margin-right: 10px;
+            cursor: pointer;
+        }
 
-header img {
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-}
+        main {
+            display: flex;
+            width: 100%;
+            flex: 1;
+            box-sizing: border-box;
+            padding: 20px;
+            gap: 20px;
+        }
 
-header h1 {
-  font-weight: bold;
-  margin: 0;
-  cursor: pointer;
-}
+        .left-container,
+        .right-container {
+            flex: 1;
+            font-family: 'Charmonman', cursive;
+            border-radius: 10px;
+            overflow: hidden; /* Ensure rounded corners for child elements */
+        }
+        .left-container p,
+        .right-container p{
+            font-family: 'Great Vibes', cursive;
+            
+        }
+        .left-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
 
-header .logo {
-  margin-left: 10px;
-}
+        .right-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
 
-header .location,
-header .additional-text {
-  margin-right: 10px;
-  cursor: pointer;
-}
+        .bottom-right-container {
+            background: transparent;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
 
-main {
-  display: flex;
-  width: 100%;
-  background: #501416;
-  height: calc(100vh - 60px);
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
+        .left-bottom-container,
+        .right-bottom-container {
+            background: transparent;
+            padding: 10px;
+            flex: 1;
+            border-radius: 8px;
+        }
 
-.left-container,
-.right-container {
-  flex: 1;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.left-container img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.right-container {
-  display: grid;
-  font-family: 'Charmonman', cursive;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-}
-
-.right-container div {
-  text-align: justify;
-  justify-content: justify;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.right-container div p {
-  text-align: justify;
-  margin-top: 10px;
-  font-family: 'Great Vibes', cursive;
-  text-shadow: 8px 12px rgba(0, 0, 0, 0.3);
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
-
-  header h1 {
-    margin-bottom: 10px;
-  }
-
-  .left-container,
-  .right-container {
-    padding: 10px;
-  }
-
-  .right-container {
-    grid-template-columns: 1fr;
-  }
-
-  .right-container div p {
-    font-size: 14px;
-  }
-}
+        .left-bottom-container p,
+        .right-bottom-container p {
+            text-align: justify;
+            font-family: 'Great Vibes', cursive;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
-
-    <div id="splash-screen">
-        <img id="splash-image" src="splash-image.jpg" alt="Splash Image">
-    </div>
 
     <header>
         <div class="logo" onclick="redirectToHome()" style="color: #E5B82A; font-size: 30px; ">
             <img src="your-logo.png" alt="Logo">
             <!-- Replace "your-logo.png" with the actual path to your logo image -->
         </div>
-        <h1 style="color: #E5B82A; " onclick="redirectToHome()">Mandap Muhurat</h1>
-        <div class="location"  style="color: #E5B82A; font-size: 30px; " onclick="redirectToLocation()">
-            Wedding day
+        <div style="color: #E5B82A; font-size: 30px; " onclick="redirectToHome()">Mandap Muhurat</div>
+        <div class="location" onclick="redirectToLocation()" style="color: #E5B82A; font-size: 30px;">
+            Wedding Day
         </div>
-        <div class="additional-text">
-            <a href="https://maps.app.goo.gl/C39g1Xry9r2bev1L7" target="_blank" style="color: #E5B82A; font-size: 30px; ">Location</a>
+        <div class="Location">
+            <a href="https://maps.app.goo.gl/7RzZruNdb1wnihE59" target="_blank" style="color: #E5B82A; font-size: 30px; ">Location</a>
             <!-- Replace "https://your-link.com" with the actual URL -->
         </div>
     </header>
@@ -166,47 +136,30 @@ main {
         </div>
 
         <div class="right-container">
-            <div>
-                <h2 style="color: #E5B82A;">1 MARCH 2024</h2>
-                <p style="color: #E5B82A; font-size: 35px;">Haldi<br>8.40 AM</p>
+            <div class="top-right-container">
+                <div class="top-one-container">
+                    <h2 style="color: #E5B82A;">3 MARCH 2024</h2>
+                    <p style="color: #E5B82A; font-size: 30px; "> Hastha Milap<br> 9.45 PM</p>
+                </div>
+                <div class="bottom-one-container">
+                    <h2 style="color: #E5B82A;">VENUE</h2>
+                    <p style="color: #E5B82A; font-size: 26px; " onclick="ToLocation()">At,post: Atgam, undi faliya,Ta.Dist. -Valsad <br> Pin.code:396045</p>
+                </div>
             </div>
-            <div>
-                <h2 style="color: #E5B82A;">2 MARCH 2024</h2>
-                <p style="color: #E5B82A; font-size: 30px;">Grahshantak & <br> Mandap Muharat<br>8.40 AM</p>
-            </div>
-            <div>
-                <h2 style="color: #E5B82A;">2 MARCH 2024</h2>
-                <p style="color: #E5B82A; font-size: 30px;">Sangeet & Dance<br>Followed By Dinner<br>6.00 PM</p>
-            </div>
-            <div>
-                <h2 style="color: #E5B82A;">3 MARCH 2024</h2>
-                <p style="color: #E5B82A; font-size: 30px;">Barat Prasthan<br>5.00 PM</p>
-            </div>
-         
-            <div>
-                <h2 style="color: #E5B82A;">VENUE</h2>
-                <p style="color: #E5B82A; font-size: 26px;" onclick="ToLocation()" >At,Post: Segva (Khergam Road) <br>Ta.Dist. -Valsad <br>Pin.code: 396045</p>
+            <div class="bottom-right-container">
+                <div class="left-bottom-container">
+                    <h2 style="color: #E5B82A;">Sweet Thooko :</h2>
+                    <p style="color: #E5B82A; font-size: 28px; ">"In the quiet language of our hearts, love is the sweet word we speak. Join us openly, with joy, at our dear Uncle/Brother's wedding. Come soon!"</p>
+                </div>
+                <div class="right-bottom-container">
+                    <h2 style="color: #E5B82A;">By</h2>
+                    <p style="color: #E5B82A; font-size: 28px; ">Pritam, Jaimin , Mit , Megah ,Misti , jenny , dhaya and divit</p>
+                </div>
             </div>
         </div>
-        
     </main>
 
     <script>
-        // Set the time for the splash screen to be visible (in milliseconds)
-        const splashScreenTime = 3000;
-
-        // Get references to the splash screen and main content
-        const splashScreen = document.getElementById('splash-screen');
-        const mainContent = document.querySelector('main');
-
-        // Set a timeout to hide the splash screen after a certain time
-        setTimeout(() => {
-            // Hide the splash screen
-            splashScreen.style.display = 'none';
-            // Make the main content visible
-            mainContent.style.opacity = 1;
-        }, splashScreenTime);
-
         // Redirect to the home page
         function redirectToHome() {
             window.location.href = "index.html"; // Replace with the actual URL
@@ -214,12 +167,12 @@ main {
 
         // Redirect to the location page
         function redirectToLocation() {
-            window.location.href = "wedding_day.html"; // Replace with the actual URL
+            window.location.href = "index.html"; // Replace with the actual URL
         }
         function ToLocation() {
-            window.location.href = "https://maps.app.goo.gl/C39g1Xry9r2bev1L7"; // Replace with the actual URL
+            window.location.href = "https://maps.app.goo.gl/7RzZruNdb1wnihE59"; // Replace with the actual URL
         }
     </script>
 
-</body>
+</body>  
 </html>
