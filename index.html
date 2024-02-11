@@ -16,10 +16,11 @@
   background: linear-gradient(#d0cde5, #E8EAF6, #efeef6);
   background-attachment: fixed;
   flex-direction: column;
-  align-items: center;
+  align-items: center;  
 }
 
 #splash-screen {
+  
   position: fixed;
   top: 0;
   left: 0;
@@ -71,6 +72,7 @@ header .additional-text {
 }
 
 main {
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -195,14 +197,44 @@ main {
             text-decoration: none;
             cursor: pointer;
         }
-
+        .corner-image {
+            position: fixed;
+            width: 100px; /* Adjust as needed */
+            height:100px; 
+            opacity: 0.5;/* Adjust as needed */
+        }
+        .top-left {
+            top: 0;
+            left: 0;
+            transform: rotate(90deg);
+        }
+        .top-right {
+            top: 0;
+            right: 0;
+            transform: rotate(180deg);
+        }
+        .bottom-left {
+            bottom: 0;
+            left: 0;
+        }
+        .bottom-right {
+            bottom: 0;
+            right: 0;
+            transform: rotate(270deg);
+        }
+          
 
     </style>
 </head>
 <body>
+ <!-- <img src="img\CIRCLE3.png" style="opacity: 0.5">-->
 
     <div id="splash-screen">
         <img id="splash-image" src="img\1.png" alt="Splash Image">
+        <img src="img\CIRCLE2.png" class="corner-image top-left" alt="Your Image">
+  <img src="img\CIRCLE2.png" class="corner-image top-right" alt="Your Image">
+  <img src="img\CIRCLE2.png" class="corner-image bottom-left" alt="Your Image">
+  <img src="img\CIRCLE2.png" class="corner-image bottom-right" alt="Your Image">
     </div>
 
     <header>
@@ -210,7 +242,7 @@ main {
           <p>Bhoomit weds Hetali</p>
         </div>
       <!-- Trigger/Open The Modal -->
-      <a href="#" id="myBtn" style="color: #5C478A; font-size: 35px; margin-left: 100px;">Choose Location</a>
+      <a  id="myBtn" style="color: #5C478A; font-size: 25px; margin-left: 100px;">Click Here for Location</a>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -330,6 +362,11 @@ window.onclick = function(event) {
     }
 }
     </script>
+  
+  <img src="img\CIRCLE2.png" class="corner-image top-left" alt="Your Image">
+  <img src="img\CIRCLE2.png" class="corner-image top-right" alt="Your Image">
+  <img src="img\CIRCLE2.png" class="corner-image bottom-left" alt="Your Image">
+  <img src="img\CIRCLE2.png" class="corner-image bottom-right" alt="Your Image">
 
 </body>
 </html>
