@@ -71,6 +71,10 @@ header .additional-text {
 
 main {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
   width: 100%;
   font-weight: bold;
   background: linear-gradient(#d0cde5,#E8EAF6,#efeef6);
@@ -104,12 +108,14 @@ main {
   font-family: 'Charmonman', cursive;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
+  width: 100%;
 }
 
 .right-container div {
   text-align: justify;
   justify-content: justify;
   display: flex;
+  margin-bottom: 20px;
   flex-direction: column;
   height: 100%;
 }
@@ -204,7 +210,7 @@ main {
           <p>Bhoomit weds Hetali</p>
         </div>
       <!-- Trigger/Open The Modal -->
-      <a href="#" id="myBtn" style="color: #5C478A; font-size: 35px;">Choose Location</a>
+      <a href="#" id="myBtn" style="color: #5C478A; font-size: 35px; margin-left: 100px;">Choose Location</a>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
