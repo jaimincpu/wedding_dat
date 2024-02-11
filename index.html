@@ -150,23 +150,78 @@ main {
   }
 
 }
+
+
+  /* The Modal (background) */
+  .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
     </style>
 </head>
 <body>
 
     <div id="splash-screen">
-        <img id="splash-image" src="splash-image.jpg" alt="Splash Image">
+        <img id="splash-image" src="img\1.png" alt="Splash Image">
     </div>
 
     <header>
         <div class="Bhoomit-weds-Hetali" onclick="redirectToHome()" style="color:#5C478A; font-size: 50px; ">
           <p>Bhoomit weds Hetali</p>
         </div>
+      <!-- Trigger/Open The Modal -->
+      <a href="#" id="myBtn" style="color: #5C478A; font-size: 35px;">Choose Location</a>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">×</span>
+            <a href="https://maps.app.goo.gl/C39g1Xry9r2bev1L7">Go to Mama's Location</a><br>
+            <a href="https://maps.app.goo.gl/7RzZruNdb1wnihE59">Go to Mami's Location</a>
+        </div>
+
+    </div>
     </header>
 
     <main>
         <div class="left-container">
-            <img src="your-image.jpg" alt="Image">
+            <img src="img\2.png" alt="Image">
             <!-- Replace "your-image.jpg" with the actual path to your image -->
         </div>
         <div class="right-container">
@@ -190,7 +245,7 @@ main {
             <div>
                 <h2 style="color:#5C478A;">VENUE (For 2March)</h2>
                 <p style="color:#5C478A; font-size: 26px;" onclick="ToLocationMama()" >At,Post: Segva (Khergam Road) Ta.Dist. -Valsad <br>Pin.code: 396045 </p>
-                <p style="font-family: 'Times New Roman', Times, serif;color:#5C478A; font-size: 26px;" onclick="ToLocationMama()">Click Here for Location</p>
+                <p style="font-family: 'Times New Roman', Times, serif;color:#5C478A; font-size: 26px;" onclick="ToLocationMama()">(Click Here for Location)</p>
             </div>
             <div>
                 <h2 style="color:#5C478A;">3 MARCH 2024</h2>
@@ -199,14 +254,14 @@ main {
             <div>
                 <h2 style="color:#5C478A;">VENUE (For 3March)</h2>
                 <p style="color:#5C478A; font-size: 26px;" onclick="ToLocationMami()">At,post: Atgam, undi faliya,Ta.Dist. -Valsad <br> Pin.code:396045</p>
-                <p style="font-family: 'Times New Roman', Times, serif;color:#5C478A; font-size: 26px;" onclick="ToLocationMami()"> Click Here for Location</p>
+                <p style="font-family: 'Times New Roman', Times, serif;color:#5C478A; font-size: 26px;" onclick="ToLocationMami()">(Click Here for Location)</p>
             </div>
-        
+<!--        
             <div>
                 <h2 style="color:#5C478A;">Sweet Thooko :</h2>
                 <p style="color:#5C478A; font-size: 28px;">"In the quiet language of our hearts, love is the sweet word we speak. Join us openly, with joy, at our dear Uncle/Brother's wedding. Come soon!"<br>By<br>Pritam, Jaimin, Mit, Megah, Misti, Jenny, Dhaya, and Divit</p>
             </div>
-        </div>
+        </div>   -->
         
 </main>
    
@@ -242,6 +297,32 @@ main {
         function ToLocationMami() {
             window.location.href = "https://maps.app.goo.gl/7RzZruNdb1wnihE59"; // Replace with the actual URL
         }
+
+          // Get the modal
+          var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
     </script>
 
 </body>
